@@ -1,6 +1,7 @@
 import pickle
 from threading import Thread
 import sqlite3
+from model import Model
 
 import numpy as np
 from konlpy.tag import Okt
@@ -20,6 +21,9 @@ slack_events_adaptor = SlackEventAdapter(SLACK_SIGNING_SECRET, "/listening", app
 slack_web_client = WebClient(token=SLACK_TOKEN)
 
 # Req 2-2-1. pickle로 저장된 model.clf 파일 불러오기
+
+
+
 pickle_obj = None
 word_indices = None
 clf = None
